@@ -1,16 +1,13 @@
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/actions';
+import { addContact } from '../../../redux/operations';
 import { nanoid } from 'nanoid';
 
-export const Contacts = () => {
+export const Form = () => {
   const dispatch = useDispatch();
   const handleSubmit = event => {
     event.preventDefault();
     const id = nanoid();
     const form = event.target;
-    // !!!!!!!
-    localStorage.setItem( id , form.elements.name.value + ":" + form.elements.number.value)
-    // !!!!!!!
     dispatch(addContact(form.elements.name.value, form.elements.number.value, id));
     form.reset();
   };

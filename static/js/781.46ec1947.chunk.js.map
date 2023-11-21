@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/781.46ec1947.chunk.js","mappings":"gKASA,UATa,WACX,OACE,4CACe,kBADf,4BAKH,C","sources":["components/Organisms/Home/Home.js"],"sourcesContent":["const Home = () => {\n  return (\n    <div>\n      End and Bomb <br />\n      Who have red is Trumpet\n    </div>\n  );\n};\n\nexport default Home;"],"names":[],"sourceRoot":""}

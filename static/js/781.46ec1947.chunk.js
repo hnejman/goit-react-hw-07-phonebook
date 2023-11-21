@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[781],{781:function(e,n,o){o.r(n);var r=o(184);n.default=function(){return(0,r.jsxs)("div",{children:["End and Bomb ",(0,r.jsx)("br",{}),"Who have red is Trumpet"]})}}}]);
+//# sourceMappingURL=781.46ec1947.chunk.js.map

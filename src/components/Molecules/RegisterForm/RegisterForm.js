@@ -18,7 +18,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form  onSubmit={handleSubmit} autoComplete="off">
+    <form  onSubmit={handleSubmit} autoComplete="on">
       <label >
         Username
         <input type="text" name="name" />

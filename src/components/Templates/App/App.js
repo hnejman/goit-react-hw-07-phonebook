@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
 import { fetchContacts } from '../../../redux/operations';
 import { useAuth } from '../../../redux/auth';
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Layout } from "../Layout.js";
 import { RestrictedRoute } from "../../Organisms/RestrictedRoute"
 import { PrivateRoute } from '../../Organisms/PrivateRoute';
@@ -14,8 +14,7 @@ const ContactsPage = lazy(() => import('../pages/ContactsPage/ContactsPage.js'))
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isRefreshing = useAuth();
-  console.log(isRefreshing);
+  const {isRefreshing} = useAuth();
 
   useEffect(()=>{
     dispatch(fetchContacts());

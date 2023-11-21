@@ -1,8 +1,7 @@
 import { Navigation } from '../../Molecules/Navigation/Navigation';
-// import { UserMenu } from '../UserMenu/UserMenu';
-// import { AuthNav } from '../AuthNav/AuthNav';
+import { UserMenu } from '../../Molecules/UserMenu/UserMenu';
+import { AuthNav } from '../../Atoms/AuthNav/AuthNav';
 import { useAuth } from '../../../redux/auth.js';
-// import css from './AppBar.module.css';
 
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();

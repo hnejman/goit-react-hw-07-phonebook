@@ -3,14 +3,14 @@ import { useEffect, lazy } from 'react';
 import { fetchContacts } from '../../../redux/operations';
 import { useAuth } from '../../../redux/auth';
 import { Routes, Route } from "react-router-dom";
-import { Layout } from "../Layout.js";
-import { RestrictedRoute } from "../../Organisms/RestrictedRoute"
-import { PrivateRoute } from '../../Organisms/PrivateRoute';
+import { Layout } from "../Layout/Layout.js";
+import { RestrictedRoute } from "../../Atoms/RestrictedRoute/RestrictedRoute"
+import { PrivateRoute } from '../../Atoms/PrivateRoute/PrivateRoute';
 
-const HomePage = lazy(() => import('../pages/Home/Home.js'));
-const RegisterPage = lazy(() => import('../pages/Register/Register.js'));
-const LoginPage = lazy(() => import('../pages/Login/Login.js'));
-const ContactsPage = lazy(() => import('../pages/ContactsPage/ContactsPage.js'));
+const HomePage = lazy(() => import('../../Organisms/Home/Home.js'));
+const RegisterPage = lazy(() => import('../../Molecules/RegisterForm/RegisterForm'));
+const LoginPage = lazy(() => import('../../Molecules/LoginForm/LoginForm'));
+const ContactsPage = lazy(() => import('../../Organisms/ContactsPage/ContactsPage.js'));
 
 export const App = () => {
   const dispatch = useDispatch();

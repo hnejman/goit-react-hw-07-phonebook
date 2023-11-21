@@ -1,7 +1,7 @@
-import { ContactsList } from '../../../Organisms/ContactsList/ContactsList';
-import { Form } from '../../../Organisms/Form/Form.js';
-import { Filter } from '../../../Organisms/Filter/Filter.jsx';
-import { getError, getIsLoading } from '../../../../redux/selectors';
+import { ContactsList } from '../ContactsList/ContactsList';
+import { Form } from '../Form/Form.js';
+import { Filter } from '../Filter/Filter.jsx';
+import { getError, getIsLoading } from '../../../redux/selectors';
 import { useSelector } from 'react-redux'
 
 const ContactsPage = () => {

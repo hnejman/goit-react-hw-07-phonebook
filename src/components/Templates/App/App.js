@@ -1,8 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
-import { getError, getIsLoading } from '../../../redux/selectors';
 import { fetchContacts } from '../../../redux/operations';
 import { useAuth } from '../../../redux/auth';
+import { Routes, Route, Router } from "react-router-dom";
+import { Layout } from "../Layout.js";
+import { RestrictedRoute } from "../../Organisms/RestrictedRoute"
+import { PrivateRoute } from '../../Organisms/PrivateRoute';
 
 const HomePage = lazy(() => import('../pages/Home/Home.js'));
 const RegisterPage = lazy(() => import('../pages/Register/Register.js'));
@@ -11,9 +14,8 @@ const ContactsPage = lazy(() => import('../pages/ContactsPage/ContactsPage.js'))
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
   const isRefreshing = useAuth();
+  console.log(isRefreshing);
 
   useEffect(()=>{
     dispatch(fetchContacts());

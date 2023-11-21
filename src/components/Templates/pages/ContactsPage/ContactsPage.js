@@ -1,9 +1,13 @@
 import { ContactsList } from '../../../Organisms/ContactsList/ContactsList';
 import { Form } from '../../../Organisms/Form/Form.js';
 import { Filter } from '../../../Organisms/Filter/Filter.jsx';
+import { getError, getIsLoading } from '../../../../redux/selectors';
+import { useSelector } from 'react-redux'
 
-export const ContactsPage = () =>{
+const ContactsPage = () => {
 
+  const isLoading = useSelector(getIsLoading);
+  const error = useSelector(getError);
 
    return (
      <div>
@@ -16,3 +20,5 @@ export const ContactsPage = () =>{
    );
 
 }
+
+export default ContactsPage;

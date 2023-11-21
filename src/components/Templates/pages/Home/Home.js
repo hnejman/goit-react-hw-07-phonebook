@@ -1,8 +1,10 @@
-export const Home = () => {
+const Home = () => {
   return (
     <div>
       End and Bomb <br />
-      User is Trumpet
+      Who have red is Trumpet
     </div>
   );
 };
+
+export default Home;

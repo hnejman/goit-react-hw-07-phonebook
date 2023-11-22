@@ -8,6 +8,7 @@ const ContactsPage = () => {
 
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
+  if(error){console.log(error)};
 
    return (
      <div>
@@ -15,7 +16,6 @@ const ContactsPage = () => {
        <Form />
        <ContactsList/> 
        {isLoading && !error && <p>Loading... </p>}
-       {error && <p>{error}</p>}
      </div>
    );
 

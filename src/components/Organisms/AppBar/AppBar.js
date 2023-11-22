@@ -6,8 +6,6 @@ import { useAuth } from '../../../redux/auth.js';
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
-  console.log(isLoggedIn);
-
   return (
     <header>
       <Navigation />

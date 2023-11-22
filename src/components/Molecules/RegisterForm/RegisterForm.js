@@ -18,18 +18,18 @@ const RegisterForm = () => {
   };
 
   return (
-    <form  onSubmit={handleSubmit} autoComplete="on">
+    <form  onSubmit={handleSubmit} autoComplete="off">
       <label >
-        Username
-        <input type="text" name="name" />
+        Username {' '}
+        <input type="text" name="name" style={{  margin: '16px', display: 'block' }} />
       </label>
       <label >
-        Email
-        <input type="email" name="email" />
+        Email {' '}
+        <input type="email" name="email" style={{  margin: '16px', display: 'block' }} />
       </label>
       <label >
-        Password
-        <input type="password" name="password" />
+        Password {' '}
+        <input type="password" name="password" style={{  margin: '16px', display: 'block' }} />
       </label>
       <button type="submit">Register</button>
     </form>

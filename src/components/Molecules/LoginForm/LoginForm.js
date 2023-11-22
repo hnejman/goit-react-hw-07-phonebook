@@ -19,11 +19,11 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
       <label>
-        Email
+        Email {' '}
         <input type="email" name="email" />
       </label>
       <label>
-        Password
+        Password {' '}
         <input type="password" name="password" />
       </label>
       <button type="submit">Log In</button>

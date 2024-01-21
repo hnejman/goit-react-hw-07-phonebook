@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../../../redux/auth';
+import PropTypes from 'prop-types';
 
 export const PrivateRoute = ({ redirectTo, component }) => {
   const { isLoggedIn, isRefreshing } = useAuth();
@@ -7,3 +8,8 @@ export const PrivateRoute = ({ redirectTo, component }) => {
 
   return shouldRedirect ? <Navigate to={redirectTo} /> : component;
 };
+
+PrivateRoute.propTypes = {
+  redirectTo: PropTypes.string,
+  component: PropTypes.func,
+}

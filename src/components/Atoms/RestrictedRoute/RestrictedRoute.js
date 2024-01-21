@@ -8,7 +8,7 @@ export const RestrictedRoute = ({ redirectTo, component,}) => {
   return isLoggedIn ? <Navigate to={redirectTo} /> : component;
 };
 
-PrivateRoute.propTypes = {
+RestrictedRoute.propTypes = {
   redirectTo: PropTypes.string,
-  component: PropTypes.func,
+  component: PropTypes.object,
 }

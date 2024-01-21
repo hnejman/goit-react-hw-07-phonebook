@@ -6,7 +6,7 @@ export const Contact = ({ contact, handleDelete }) => {
     <p>
       <span>{contact.name}: </span>
       <span>{contact.number}</span>
-      <button type="button" onClick={()=>{handleDelete(contact)}}>
+      <button className='delete-btn' type="button" onClick={()=>{handleDelete(contact)}}>
         delete
       </button>
     </p>

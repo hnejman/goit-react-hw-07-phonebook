@@ -7,14 +7,12 @@ export const Navigation = () => {
 
   return (
     <>
-        <Tab _selected>
-          <NavLink to="/">Home</NavLink>
-        </Tab>
-        {isLoggedIn && (
-          <Tab>
-            <NavLink to="/contacts">Contacts</NavLink>
-         </Tab> 
-         )}
+      <NavLink to="/">
+        <Tab>Home</Tab>
+      </NavLink>
+      {isLoggedIn && (
+          <NavLink to="/contacts"><Tab>Contacts</Tab></NavLink>
+      )}
     </>
   );
 };

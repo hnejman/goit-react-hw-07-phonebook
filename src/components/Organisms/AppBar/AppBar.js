@@ -12,6 +12,7 @@ export const AppBar = () => {
       <Tabs>
         <TabList>
           <Navigation />
+          <div className='bufor'></div>
           {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </TabList>
       </Tabs>

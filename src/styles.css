@@ -13,3 +13,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input{
+  border: 3px solid #1a570d;
+}
+
+.delete-btn{
+  background-color: blueviolet;
+  border-radius: 10%;
+  margin: 10px;
+}
+
+.bufor {
+  width: 100vw;
+}

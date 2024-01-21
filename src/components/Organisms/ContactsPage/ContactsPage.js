@@ -12,8 +12,8 @@ const ContactsPage = () => {
 
    return (
      <div>
-       <Filter />
        <Form />
+       <Filter />
        <ContactsList/> 
        {isLoading && !error && <p>Loading... </p>}
      </div>

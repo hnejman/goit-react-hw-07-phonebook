@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
-import { fetchContacts } from '../../../redux/operations';
 import { useAuth } from '../../../redux/auth';
+import { refreshUser, fetchContacts } from '../../../redux/auth/operations';
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "../Layout/Layout.js";
 import { RestrictedRoute } from "../../Atoms/RestrictedRoute/RestrictedRoute"
@@ -18,6 +18,7 @@ export const App = () => {
 
   useEffect(()=>{
     dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
@@ -27,7 +28,7 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route
-          path="/register"
+          path="register"
           element={
             <RestrictedRoute 
               redirectTo="/contacts" 

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Contact } from '../../Molecules/Contact/Contact';
-import { deleteContact } from '../../../redux/operations';
+import { deleteContact } from '../../../redux/auth/operations';
 
 export const ContactsList = () => {
   const filter = useSelector(state => state.filter);
